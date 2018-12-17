@@ -13,11 +13,13 @@ while True:
     cv2.imshow('frame', frame)
     for (x,y,w,h) in faces:
         print(x,y,w,h)
+        roi_gray = gray[y:y+h ,
+                        x:x+w ]
 
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
 
-
+cv2.imwrite("img_my.png",roi_gray)
 cap.release()
 cv2.destroyAllWindows()
 
