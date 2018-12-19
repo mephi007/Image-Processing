@@ -16,10 +16,10 @@ while True:
     for (x,y,w,h) in faces:
         print(x,y,w,h)
         roi_gray = gray[y:y+h, x:x+w]
-        # for i in range(10):
-        #    # fil = str(i)
-        # # file = str(i).join(".png")
-        #     cv2.imwrite(str(i)+".png", roi_gray)
+        for i in range(10):
+           # fil = str(i)
+        # file = str(i).join(".png")
+            cv2.imwrite(str(i)+".png", roi_gray)
 
     if cv2.waitKey(20) & 0xFF == ord('q'):
         break
